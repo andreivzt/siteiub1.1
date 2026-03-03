@@ -56,9 +56,112 @@ h3,
 }
 
 @media (max-width: 900px) {
+    .main-container {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 0 40px 0;
+        display: block;
+    }
+
     .book-container {
         width: 90vw;
-        height: 60vh;
+        height: auto;
+        transform: none !important;
+        margin: 0 auto;
+    }
+
+    .book {
+        width: 100%;
+        height: auto;
+        transform: none !important;
+        float: none;
+    }
+
+    .page {
+        position: relative;
+        transform: none !important;
+        transition: none;
+        height: auto;
+        z-index: auto !important;
+    }
+
+    .front,
+    .back {
+        position: relative;
+        transform: none !important;
+        width: 100%;
+        height: auto;
+        min-height: 50vh;
+        backface-visibility: visible;
+        border-radius: 15px !important;
+        margin-bottom: 20px;
+        background-image: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 40px 20px;
+    }
+
+    .cover-front,
+    .cover-back {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* Ascunde butoanele de navigare (utilizatorul va da scroll) */
+    .page-controls,
+    .next-btn,
+    .prev-btn {
+        display: none !important;
+    }
+
+    /* Ajustari pentru poze suprapuse pe mobile */
+    .double-polaroid-container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .small-polaroid {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        transform: none !important;
+    }
+
+    .polaroid-tilt-left,
+    .polaroid-tilt-right {
+        transform: rotate(0) !important;
+    }
+
+    .polaroid-tilt-left:hover,
+    .polaroid-tilt-right:hover {
+        transform: scale(1.05) !important;
+    }
+
+    /* Plaseaza plicul de surpriza fixeaza pentru a fi mereu vizibil */
+    .magic-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .invitation-card {
+        padding: 30px 20px;
+        width: 90vw;
+    }
+
+    .love-text {
+        font-size: 2.5rem;
     }
 }
 
